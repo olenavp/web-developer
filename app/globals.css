@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.27;
+  color: #111;
+  background: #fdfdfd;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  max-width: 60ch;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 10;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+main {
+  margin: 0 auto;
+
+}
+
+section {
+
+}
+
+.hero-section {
+  max-width: none;
+  min-height: 80vh;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: #81B29A;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta:hover {
+  background: #73af92;
+  transform: translateY(-2px);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  background: #fafafa;
+  color: #555;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+}
+
+.hero-background {
+  background-color: #e2eaff;
+
+  background-image: 
+  radial-gradient(
+        at 0% 0%,
+        rgba(99, 102, 241, 0.15) 0px,
+        transparent 50%
+      ),
+
+      radial-gradient(
+        at 100% 0%,
+        rgba(139, 92, 246, 0.15) 0px,
+        transparent 50%
+      ),
+
+      radial-gradient(
+        at 50% 50%,
+        rgba(255, 255, 255, 0.9) 0px,
+        transparent 50%
+      ),
+
+      radial-gradient(
+        at 80% 100%,
+        rgba(56, 189, 248, 0.2) 0px,
+        transparent 50%
+      ),
+
+      radial-gradient(
+        at 20% 90%,
+        rgba(79, 70, 229, 0.1) 0px,
+        transparent 50%
+      );
+}
