@@ -1,6 +1,9 @@
 'use client';
 import CtaButton from './CtaButton';
 import { motion } from 'framer-motion';
+import FadeIn from './FadeIn';
+import { Send } from 'lucide-react';
+import { SectionHeader } from './section-header';
 
 export function ClientsProblemsSection() {
   const items = [
@@ -16,7 +19,8 @@ export function ClientsProblemsSection() {
     {
       number: '02',
       title: 'Обмеження конструкторів',
-      problem: 'Конструктори гальмують завантаження та не дають унікальності. Типові шаблони гальмують розвиток та роблять вас "одним із багатьох".',
+      problem:
+        'Конструктори гальмують завантаження та не дають унікальності. Типові шаблони гальмують розвиток та роблять вас "одним із багатьох".',
       solution:
         'Розробка на чистому коді: повна свобода функцій та миттєве завантаження.',
       result: 'Технологічна свобода',
@@ -24,8 +28,7 @@ export function ClientsProblemsSection() {
     {
       number: '03',
       title: 'Низька швидкість та погана адаптивність',
-      problem:
-        'Сайт довго вантажиться, це дратує відвідувачів.',
+      problem: 'Сайт довго вантажиться, це дратує відвідувачів.',
       solution:
         'Ультра-швидке завантаження та бездоганний досвід на смартфонах. Оптимізація швидкості до рівня Google Green Zone.',
       result: 'Максимальна конверсія',
@@ -35,84 +38,80 @@ export function ClientsProblemsSection() {
   return (
     <section
       id="problems"
-      className="py-32 px-6 sm:px-10 lg:px-12 bg-[#16181A] relative overflow-hidden"
+      className="py-32 px-6 sm:px-10 lg:px-12 bg-graphite relative overflow-hidden"
     >
-      <div className="absolute top-0 right-0 w-[30%] h-[30%] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[30%] h-[30%] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">
-        <div className="mb-20">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-[1px] bg-[#D4AF37]" />
-            <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-[0.4em]">
-              Навіщо це вам
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#F5F5F0] leading-[1.1] tracking-tight font-serif italic">
-            Вирішую проблеми, <br />
-            <span className="font-sans not-italic text-[#F5F5F0]/20">
-              що зупиняють ваш ріст
-            </span>
-          </h2>
-        </div>
+        <SectionHeader
+          label="Навіщо це вам"
+          title="Вирішую проблеми"
+          subtitle="що зупиняють ваш ріст"
+        />
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {items.map((item, index) => (
-            <div
-              key={index}
-              className="group relative h-[400px] bg-[#0D0D0E] rounded-[3rem] overflow-hidden border border-white/[0.03] transition-all duration-700 hover:border-[#D4AF37]/30 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)]"
-            >
-              <div className="p-8 h-full flex flex-col justify-between transition-all duration-700 group-hover:scale-95 group-hover:opacity-0">
-                <div>
-                  <div className="text-5xl font-serif italic text-[#D4AF37]/50 mb-4 group-hover:text-[#D4AF37]/30 transition-colors">
-                    {item.number}
+            <FadeIn key={index} delay={0.2 + index * 0.1}>
+              <div className="group relative h-[420px] md:h-[450px] bg-gradient-to-br from-graphite-light to-night rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-card-border transition-all duration-700 hover:border-accent/30 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)]">
+                <div className="absolute left-8 right-8 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
+
+                <div className="p-7 md:p-8 lg:p-10 h-full flex flex-col justify-between transition-all duration-700 ease-[0.22, 1, 0.36, 1] group-hover:scale-95 group-hover:opacity-0">
+                  <div>
+                    <div className="text-5xl lg:text-6xl font-serif italic text-accent/20 mb-4 lg:mb-6 group-hover:text-accent/40 transition-colors">
+                      {item.number}
+                    </div>
+                    <h3 className="text-xl lg:text-2xl font-bold text-cream mb-3 lg:mb-4 leading-tight tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm lg:text-base text-cream-muted leading-relaxed font-medium italic font-serif">
+                      {item.problem}
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-[#F5F5F0] mb-2 leading-tight tracking-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-[#F5F5F0]/50 leading-relaxed font-medium">
-                    {item.problem}
+
+                  <div className="flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] text-accent font-bold">
+                    <div className="w-10 h-10 rounded-full border border-accent/20 flex items-center justify-center bg-night/50">
+                      <span className="text-lg">→</span>
+                    </div>
+                    <span className="hidden sm:inline">Як я це вирішу</span>
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-center bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[0.22, 1, 0.36, 1]">
+                  <div className="mb-6 lg:mb-8 relative">
+                    <Send className="absolute -top-10 -right-4 w-24 h-24 lg:w-32 lg:h-32 text-night/5 rotate-12" />
+
+                    <span className="text-[10px] lg:text-[12px] font-mono text-night/50 mb-2 block uppercase tracking-[0.4em] font-bold">
+                      [ Рішення ]
+                    </span>
+                    <h4 className="text-night text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
+                      Мій метод
+                    </h4>
+                  </div>
+
+                  <p className="text-base lg:text-lg text-night font-medium leading-relaxed mb-8 lg:mb-12 italic font-serif">
+                    {item.solution}
                   </p>
-                </div>
 
-                <div className="flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] text-[#D4AF37] font-bold">
-                  <span className="w-8 h-8 rounded-full border border-[#D4AF37]/20 flex items-center justify-center group-hover:bg-[#D4AF37] group-hover:text-[#0D0D0E] transition-all">
-                    →
-                  </span>
-                  <span>Як я це вирішу</span>
-                </div>
-              </div>
-
-              <div className="absolute inset-0 p-8 flex flex-col justify-center bg-[#D4AF37] translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[0.22, 1, 0.36, 1]">
-                <div className="mb-8">
-                  <span className="text-[10px] font-mono text-[#0D0D0E]/50 mb-2 block uppercase tracking-[0.3em]">
-                    [ Рішення ]
-                  </span>
-                  <h4 className="text-[#0D0D0E] text-2xl font-bold leading-tight tracking-tight">
-                    Мій метод
-                  </h4>
-                </div>
-
-                <p className="text-base text-[#0D0D0E]/90 font-medium leading-relaxed mb-10">
-                  {item.solution}
-                </p>
-
-                <div className="pt-8 border-t border-[#0D0D0E]/10">
-                  <span className="text-[10px] uppercase text-[#0D0D0E]/40 font-bold block mb-2 tracking-widest">
-                    Результат
-                  </span>
-                  <span className="text-[#0D0D0E] font-bold text-lg leading-none">
-                    {item.result}
-                  </span>
+                  <div className="pt-6 lg:pt-8 border-t border-night/15">
+                    <span className="text-[10px] lg:text-[12px] uppercase text-night/40 font-bold block mb-2 tracking-[0.3em]">
+                      Результат
+                    </span>
+                    <span className="text-night font-bold text-lg lg:text-xl leading-none">
+                      {item.result}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
 
-        <div className="mt-24 flex flex-col items-center gap-6">
-          <div className="w-px h-16 bg-gradient-to-b from-[#D4AF37] to-transparent" />
-          <CtaButton />
-        </div>
+        <FadeIn delay={0.6}>
+          <div className="mt-20 flex flex-col items-center gap-10">
+            <div className="w-px h-20 bg-gradient-to-b from-accent to-transparent" />
+            <CtaButton />
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

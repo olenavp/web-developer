@@ -2,6 +2,7 @@
 const config = {
     theme: {
         extend: {
+            
             animation: {
                 'wave-slow': 'wave 20s linear infinite',
                 'fade-up': 'fadeUp 0.8s ease forwards',

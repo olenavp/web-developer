@@ -1,6 +1,7 @@
 'use client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 interface AccordionItemProps {
   title: string;
@@ -21,13 +22,26 @@ export function CustomAccordionItem({
   description,
   clientRole,
   result,
-  children,
 }: AccordionItemProps) {
+  const itemRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isOpen && itemRef.current) {
+      setTimeout(() => {
+        itemRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 100);
+    }
+  }, [isOpen]);
+
   return (
     <div
-      className={`overflow-hidden transition-all duration-700 ease-[0.22, 1, 0.36, 1] ${
+      ref={itemRef} 
+      className={`overflow-hidden transition-all duration-700 ease-[0.22, 1, 0.36, 1] scroll-mt-32 ${
         isOpen
-          ? 'rounded-[2.5rem] shadow-[0_50px_100px_-20px_rgba(212,175,55,0.25)] scale-[1.02] relative'
+          ? 'rounded-[2.5rem] shadow-accent-glow scale-[1.02] relative z-10'
           : 'rounded-[2rem] shadow-lg border-white/[0.02]'
       }`}
     >
@@ -35,10 +49,8 @@ export function CustomAccordionItem({
         onClick={onClick}
         className={`w-full flex items-center justify-between text-left transition-all duration-700 group relative ${
           isOpen
-            ? 
-              'bg-gradient-to-r from-[#D4AF37] via-[#F3D37A] to-[#D4AF37] px-6 py-4 text-[#0D0D0E]'
-            : 
-              'bg-gradient-to-br from-[#2A2D31] to-[#121416] px-6 py-4 text-[#F5F5F0] hover:from-[#32363B] hover:to-[#16181A]'
+            ? 'bg-gradient-to-r from-accent via-accent-light to-accent px-6 py-6 text-night'
+            : 'bg-gradient-to-br from-surface to-graphite px-6 py-6 text-cream hover:from-surface-hover hover:to-graphite'
         }`}
       >
         <div
@@ -51,13 +63,13 @@ export function CustomAccordionItem({
           {number && (
             <div className="relative">
               {isOpen && (
-                <div className="absolute inset-0 bg-[#0D0D0E]/20 blur-xl rounded-full" />
+                <div className="absolute inset-0 bg-night/20 blur-xl rounded-full" />
               )}
               <span
-                className={`relative text-[10px] font-mono font-bold px-4 py-2 rounded-full transition-all duration-500 border ${
+                className={`relative text-[12px] font-mono font-bold px-4 py-2 rounded-full transition-all duration-500 border ${
                   isOpen
-                    ? 'bg-[#0D0D0E] text-[#D4AF37] border-[#0D0D0E]'
-                    : 'bg-[#0D0D0E]/40 text-[#D4AF37] border-[#D4AF37]/20 shadow-inner'
+                    ? 'bg-night text-accent border-night'
+                    : 'bg-night/40 text-accent border-accent/20 shadow-inner'
                 }`}
               >
                 {number}
@@ -67,8 +79,8 @@ export function CustomAccordionItem({
           <h3
             className={`text-2xl md:text-3xl font-bold tracking-tight transition-all duration-500 ${
               isOpen
-                ? 'text-[#0D0D0E] drop-shadow-sm'
-                : 'text-[#F5F5F0]/90 group-hover:text-[#F5F5F0]'
+                ? 'text-night drop-shadow-sm'
+                : 'text-cream/90 group-hover:text-cream'
             }`}
           >
             {title}
@@ -78,8 +90,8 @@ export function CustomAccordionItem({
         <div
           className={`w-14 h-14 rounded-full border flex items-center justify-center transition-all duration-700 shadow-2xl ${
             isOpen
-              ? 'rotate-45 border-[#0D0D0E]/20 text-[#0D0D0E] bg-[#0D0D0E]/10 scale-110'
-              : 'rotate-0 border-white/10 text-[#D4AF37] bg-[#0D0D0E]/30 group-hover:border-[#D4AF37]/50 group-hover:scale-110'
+              ? 'rotate-45 border-night/20 text-night bg-night/10 scale-110'
+              : 'rotate-0 border-white/10 text-accent bg-night/30 group-hover:border-accent/50 group-hover:scale-110'
           }`}
         >
           <Plus className="w-7 h-7" strokeWidth={1.5} />
@@ -93,39 +105,37 @@ export function CustomAccordionItem({
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-gradient-to-b from-[#D4AF37] to-[#B89528] overflow-hidden shadow-inner"
+            className="bg-gradient-to-b from-accent to-accent-dark overflow-hidden shadow-inner"
           >
-            <div className="pb-20 px-10 md:pl-32 pr-12 relative">
-              <div className="absolute inset-0 opacity-[0.15] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] mix-blend-overlay" />
-
+            <div className="pb-10 px-10 md:pl-20 pr-12 relative">
               <div className="relative">
                 {description && (
-                  <p className="text-2xl md:text-3xl text-[#0D0D0E]/90 leading-snug mb-16 max-w-4xl italic font-serif border-l-4 border-[#0D0D0E]/10 pl-10 pt-4">
+                  <p className="text-2xl md:text-3xl text-night/90 leading-tight mb-16 max-w-4xl italic font-serif border-l-4 border-night/10 pl-10 pt-4">
                     {description}
                   </p>
                 )}
 
                 {(clientRole || result) && (
-                  <div className="grid sm:grid-cols-2 gap-16 py-12 border-t border-[#0D0D0E]/10 max-w-4xl">
+                  <div className="grid sm:grid-cols-2 gap-16 py-8 border-t border-night/10 max-w-4xl">
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#0D0D0E]/40" />
-                        <span className="text-[11px] font-mono text-[#0D0D0E]/50 uppercase tracking-[0.4em] font-bold">
+                        <div className="w-1.5 h-1.5 rounded-full bg-night/40" />
+                        <span className="text-[12px] font-mono text-night/50 uppercase tracking-[0.4em] font-bold">
                           Ваша участь
                         </span>
                       </div>
-                      <div className="text-[#0D0D0E] font-bold text-xl md:text-2xl leading-tight">
+                      <div className="text-night font-medium text-xl md:text-2xl leading-tight">
                         {clientRole}
                       </div>
                     </div>
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#0D0D0E]/40" />
-                        <span className="text-[11px] font-mono text-[#0D0D0E]/50 uppercase tracking-[0.4em] font-bold">
+                        <div className="w-1.5 h-1.5 rounded-full bg-night/40" />
+                        <span className="text-[12px] font-mono text-night/50 uppercase tracking-[0.4em] font-bold">
                           Результат етапу
                         </span>
                       </div>
-                      <div className="text-[#0D0D0E] font-bold text-xl md:text-2xl leading-tight">
+                      <div className="text-night font-medium text-xl md:text-2xl leading-tight">
                         {result}
                       </div>
                     </div>

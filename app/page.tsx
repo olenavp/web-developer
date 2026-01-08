@@ -1,18 +1,20 @@
-import { HeroSection } from "@/components/hero-section"
-import { ProcessSection } from "@/components/process-section"
-import { WhySection } from "@/components/why-section"
-import { FAQSection } from "@/components/faq-section"
-import { ContactSection } from "@/components/contact-section"
-import { ClientsProblemsSection } from "@/components/client-problem-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
-import { ProjectsSection } from "@/components/projects-section"
+import { HeroSection } from '@/components/hero-section';
+import { ProcessSection } from '@/components/process-section';
+import { WhySection } from '@/components/why-section';
+import { FAQSection } from '@/components/faq-section';
+import { ContactSection } from '@/components/contact-section';
+import { ClientsProblemsSection } from '@/components/client-problem-section';
+import { TestimonialsSection } from '@/components/testimonials-section';
+import { ProjectsSection } from '@/components/projects-section';
+import FadeIn from '@/components/FadeIn';
+import { TechLine } from '@/components/tech-line';
 
 export default function Home() {
-
   return (
     <div className="min-h-screen">
       <HeroSection />
       <main>
+          <TechLine />
         <section className="section-subtle-1">
           <ClientsProblemsSection />
         </section>
@@ -39,5 +41,5 @@ export default function Home() {
         </section>
       </main>
     </div>
-  )
+  );
 }

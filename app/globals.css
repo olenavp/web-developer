@@ -1,5 +1,82 @@
 @import 'tailwindcss';
 
+@import 'tailwindcss';
+
+@theme {
+  --color-night: #0d0d0e;
+  --color-graphite: #16181a;
+  --color-graphite-light: #1a1c1e;
+
+  --color-surface: #2a2d31;
+  --color-surface-hover: #32363b;
+
+  --color-accent: #d4af37;
+  --color-accent-light: #f3d37a;
+  --color-accent-dark: #b89528;
+
+  --color-cream: #f5f5f0;
+  --color-cream-muted: rgba(245, 245, 240, 0.6);
+  --color-card-border: rgba(255, 255, 255, 0.05);
+
+  --shadow-accent-glow: 0 20px 40px -10px rgba(212, 175, 55, 0.3);
+
+  --animate-wave-slow: wave 20s linear infinite;
+  --animate-fade-up: fadeUp 0.8s ease forwards;
+  --animate-text-gradient: gradientShift 3s ease infinite;
+  --animate-light-sweep: light-sweep 1.5s ease-in-out infinite;
+
+  @keyframes wave {
+    0% {
+      transform: translateX(-25%);
+    }
+    50% {
+      transform: translateX(25%);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes gradientShift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  @keyframes light-sweep {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-night text-cream antialiased;
+  }
+}
+
+body {
+  background-color: var(--night);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
@@ -33,11 +110,6 @@ h3 {
 }
 
 h1 {
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -113,7 +185,6 @@ footer {
   }
 
   section {
-    margin-bottom: 3rem;
   }
 }
 

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import CtaButton from './CtaButton';
 import { CustomAccordionItem } from './ui/accordion';
+import { SectionHeader } from './section-header';
 
 export function FAQSection() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -9,24 +10,19 @@ export function FAQSection() {
   return (
     <section
       id="faq"
-      className="py-32 px-6 sm:px-10 lg:px-12 bg-[#0D0D0E] relative overflow-hidden"
+      className="py-32 px-6 sm:px-10 lg:px-12 bg-night relative overflow-hidden"
     >
-      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-[#D4AF37]/5 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-accent/5 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative">
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-[1px] bg-[#D4AF37]" />
-            <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-[0.4em]">
-              [ Питання та відповіді ]
-            </span>
+            <SectionHeader
+              label="Питання та відповіді"
+              title="Часті питання:"
+              subtitle="що варто знати перед стартом"
+            />
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#F5F5F0] font-serif italic tracking-tight leading-[1.1]">
-            Часті{' '}
-            <span className="font-sans not-italic text-[#F5F5F0]/20">
-              запитання
-            </span>
-          </h2>
         </div>
 
         <div className="space-y-6">
@@ -42,17 +38,17 @@ export function FAQSection() {
           ))}
         </div>
 
-        <div className="mt-32 flex flex-col items-center text-center">
+        <div className="mt-20 flex flex-col items-center text-center">
           <div className="space-y-8 mb-12">
-            <p className="text-[#F5F5F0]/40 font-serif italic text-2xl md:text-3xl max-w-xl leading-relaxed">
+            <p className="text-cream-muted font-serif italic text-2xl md:text-3xl max-w-xl leading-relaxed">
               «Не знайшли відповіді на своє питання? Давайте обговоримо його
               особисто».
             </p>
-            <div className="w-12 h-[1px] bg-[#D4AF37]/30 mx-auto" />
+            <div className="w-12 h-[1px] bg-accent/30 mx-auto" />
           </div>
 
           <div className="flex flex-col items-center gap-8">
-            <div className="w-px h-16 bg-gradient-to-b from-[#D4AF37] to-transparent" />
+            <div className="w-px h-16 bg-gradient-to-b from-accent to-transparent" />
             <CtaButton />
           </div>
         </div>
