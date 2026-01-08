@@ -1,8 +1,7 @@
-"use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import CtaButton from "./CtaButton";
-import { CustomAccordionItem } from "./ui/accordion";
+'use client';
+import { useState } from 'react';
+import CtaButton from './CtaButton';
+import { CustomAccordionItem } from './ui/accordion';
 
 export function ProcessSection() {
     const steps = [
@@ -43,40 +42,51 @@ export function ProcessSection() {
         },
     ];
 
-    const [activeStep, setActiveStep] = useState<number | null>(null);
+  const [activeStep, setActiveStep] = useState<number | null>(null);
 
-    return (
-        <section id="process" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#1F2124] border-y border-white/[0.02]">
-            <div className="max-w-5xl mx-auto">
-                <div className="mb-20">
-                    <span className="text-sm font-mono text-[#D4AF37] uppercase tracking-[0.2em] block mb-4">
-                        [ Етапи співпраці ]
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#F5F5F0] mb-6 tracking-tight font-serif italic leading-tight">
-                        Від ідеї до результату: <br />
-                        <span className="font-sans not-italic text-[#F5F5F0]/30">прозорий шлях розробки</span>
-                    </h2>
-                </div>
+  return (
+    <section
+      id="process"
+      className="py-32 px-6 sm:px-10 lg:px-12 bg-[#0D0D0E] relative overflow-hidden"
+    >
+      <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none" />
 
-                <div className="space-y-4">
-                    {steps.map((step, index) => (
-                        <CustomAccordionItem
-                            key={index}
-                            number={step.number}
-                            title={step.title}
-                            description={step.description}
-                            clientRole={step.clientRole}
-                            result={step.result}
-                            isOpen={activeStep === index}
-                            onClick={() => setActiveStep(activeStep === index ? null : index)}
-                        />
-                    ))}
-                </div>
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-24">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-[1px] bg-[#D4AF37]" />
+            <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-[0.4em]">
+              [ Етапи співпраці ]
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-[#F5F5F0] tracking-tight font-serif italic leading-[1.1]">
+            Від ідеї до результату: <br />
+            <span className="font-sans not-italic text-[#F5F5F0]/20">
+              прозорий шлях розробки
+            </span>
+          </h2>
+        </div>
 
-                <div className="mt-20 flex justify-center">
-                    <CtaButton />
-                </div>
-            </div>
-        </section>
-    );
+        <div className="space-y-6">
+          {steps.map((step, index) => (
+            <CustomAccordionItem
+              key={index}
+              number={step.number}
+              title={step.title}
+              description={step.description}
+              clientRole={step.clientRole}
+              result={step.result}
+              isOpen={activeStep === index}
+              onClick={() => setActiveStep(activeStep === index ? null : index)}
+            />
+          ))}
+        </div>
+
+        <div className="mt-24 flex flex-col items-center gap-8">
+          <div className="w-px h-20 bg-gradient-to-b from-[#D4AF37]/50 to-transparent" />
+          <CtaButton />
+        </div>
+      </div>
+    </section>
+  );
 }

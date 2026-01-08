@@ -7,41 +7,54 @@ export function FAQSection() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#1A1C1E]">
-      <div className="max-w-5xl mx-auto">
-        <div className="mb-16">
-          <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-[0.2em] block mb-4">
-            [ Питання та відповіді ]
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F5F5F0] font-serif italic tracking-tight">
+    <section
+      id="faq"
+      className="py-32 px-6 sm:px-10 lg:px-12 bg-[#0D0D0E] relative overflow-hidden"
+    >
+      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-[#D4AF37]/5 blur-[140px] rounded-full pointer-events-none" />
+
+      <div className="max-w-5xl mx-auto relative">
+        <div className="mb-20">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-[1px] bg-[#D4AF37]" />
+            <span className="text-[10px] font-mono text-[#D4AF37] uppercase tracking-[0.4em]">
+              [ Питання та відповіді ]
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-[#F5F5F0] font-serif italic tracking-tight leading-[1.1]">
             Часті{' '}
-            <span className="font-sans not-italic text-[#F5F5F0]/30">
+            <span className="font-sans not-italic text-[#F5F5F0]/20">
               запитання
             </span>
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {faqs.map((faq, index) => (
             <CustomAccordionItem
               key={index}
               title={faq.question}
+              description={faq.answer}
               isOpen={activeFaq === index}
               onClick={() => setActiveFaq(activeFaq === index ? null : index)}
-            >
-              <div className="space-y-4">
-                <p className="leading-relaxed">{faq.answer}</p>
-              </div>
-            </CustomAccordionItem>
+              number={(index + 1).toString().padStart(2, '0')}
+            />
           ))}
         </div>
 
-        <div className="mt-20 flex flex-col items-center text-center space-y-8">
-          <p className="text-[#F5F5F0]/40 font-serif italic text-lg max-w-md">
-            Не знайшли відповіді на своє питання? Давайте обговоримо його
-            особисто.
-          </p>
-          <CtaButton />
+        <div className="mt-32 flex flex-col items-center text-center">
+          <div className="space-y-8 mb-12">
+            <p className="text-[#F5F5F0]/40 font-serif italic text-2xl md:text-3xl max-w-xl leading-relaxed">
+              «Не знайшли відповіді на своє питання? Давайте обговоримо його
+              особисто».
+            </p>
+            <div className="w-12 h-[1px] bg-[#D4AF37]/30 mx-auto" />
+          </div>
+
+          <div className="flex flex-col items-center gap-8">
+            <div className="w-px h-16 bg-gradient-to-b from-[#D4AF37] to-transparent" />
+            <CtaButton />
+          </div>
         </div>
       </div>
     </section>

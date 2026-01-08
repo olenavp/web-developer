@@ -15,14 +15,17 @@ export default function CtaButton() {
             onClick={scrollToContact} 
             variant="default" 
             size="lg"
-            className="group relative overflow-hidden"
+            className="group relative" 
         >
-            <span className="relative flex items-center gap-3">
+            <span className="relative flex items-center gap-4">
                 Обговорити задачу
-                <Send className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <div className="relative flex items-center justify-center">
+                    <Send className="w-5 h-5 transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-white/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
             </span>
-            
-            <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         </Button>
     );
 }
