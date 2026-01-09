@@ -1,44 +1,28 @@
-import { HeroSection } from '@/components/hero-section';
-import { ProcessSection } from '@/components/process-section';
-import { WhySection } from '@/components/why-section';
-import { FAQSection } from '@/components/faq-section';
-import { ContactSection } from '@/components/contact-section';
-import { ClientsProblemsSection } from '@/components/client-problem-section';
-import { TestimonialsSection } from '@/components/testimonials-section';
-import { ProjectsSection } from '@/components/projects-section';
-import FadeIn from '@/components/FadeIn';
-import { TechLine } from '@/components/tech-line';
+import {
+  ClientsProblemsSection,
+  ContactSection,
+  FAQSection,
+  HeroSection,
+  ProcessSection,
+  ProjectsSection,
+  TechLine,
+  TestimonialsSection,
+  WhySection,
+} from '@/components/home-page-sections';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection />
       <main>
-          <TechLine />
-        <section className="section-subtle-1">
-          <ClientsProblemsSection />
-        </section>
-
-        <section className="section-subtle-2">
-          <ProcessSection />
-        </section>
-
-        <section className="section-subtle-3">
-          <WhySection />
-        </section>
-
-        <section className="section-projects">
-          <ProjectsSection />
-        </section>
-
-        <section className="section-clean">
-          <TestimonialsSection />
-          <FAQSection />
-        </section>
-
-        <section className="section-contact">
-          <ContactSection />
-        </section>
+        <TechLine />
+        <ClientsProblemsSection />
+        <ProcessSection />
+        <WhySection />
+        <ProjectsSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <ContactSection />
       </main>
     </div>
   );

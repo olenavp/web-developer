@@ -1,0 +1,9 @@
+export { HeroSection } from './hero-section';
+export { WhySection } from './why-section';
+export { ProjectsSection } from './projects-section';
+export { ContactSection } from './contact-section';
+export { ClientsProblemsSection } from './client-problem-section';
+export { ProcessSection } from './process-section';
+export { TestimonialsSection } from './testimonials-section';
+export { FAQSection } from './faq-section';
+export { TechLine } from './tech-line';
