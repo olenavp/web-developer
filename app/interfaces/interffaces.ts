@@ -20,3 +20,8 @@ export interface Project {
   mobileImg: string | StaticImageData;
   link: string;
 }
+
+export interface AdaptiveShowcaseProps {
+  tabletImg: string | StaticImageData;
+  mobileImg: string | StaticImageData;
+}

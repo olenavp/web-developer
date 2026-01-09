@@ -1,7 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 import { SectionHeader } from '../home-page-sections/section-header';
+import { AdaptiveShowcaseProps } from '@/app/interfaces/interffaces';
 
-export function AdaptiveShowcase({ tabletImg, mobileImg }) {
+export function AdaptiveShowcase({
+  tabletImg,
+  mobileImg,
+}: AdaptiveShowcaseProps) {
   return (
     <section className="py-24 bg-graphite">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
@@ -13,7 +19,8 @@ export function AdaptiveShowcase({ tabletImg, mobileImg }) {
           />
           <p className="text-cream/50 text-lg leading-relaxed italic font-serif border-l border-accent/20 pl-6">
             «Більше 70% користувачів заходять зі смартфонів. Розроблено
-            інтерфейс, яким днаково користуватися з телефону, планшета чи компʼютера.»
+            інтерфейс, яким днаково користуватися з телефону, планшета чи
+            компʼютера.»
           </p>
         </div>
 
