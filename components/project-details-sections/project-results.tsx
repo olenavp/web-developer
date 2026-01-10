@@ -4,7 +4,6 @@ import { Button } from "../ui/button";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export function ProjectResults({ project, nextProject }: { project: any, nextProject?: any }) {
-  // Дістаємо цифри з даних проєкту
   const stats = [
     { label: 'Performance', value: project.stats?.performance || 100 },
     { label: 'Accessibility', value: project.stats?.accessibility || 100 },
@@ -59,7 +58,7 @@ export function ProjectResults({ project, nextProject }: { project: any, nextPro
 
           {nextProject && (
             <Link href={`/projects/${nextProject.id}`} className="group flex flex-col items-center gap-4 transition-all duration-500 hover:scale-105">
-              <span className="text-[10px] font-mono text-cream/20 uppercase tracking-[0.4em]">Наступний кейс</span>
+              <span className="text-[12px] font-mono text-cream/20 uppercase tracking-[0.4em]">Наступний кейс</span>
               <div className="flex items-center gap-4 text-cream/40 group-hover:text-accent transition-colors">
                 <span className="text-2xl font-serif italic">{nextProject.projectName}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />

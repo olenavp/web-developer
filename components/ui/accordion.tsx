@@ -39,7 +39,7 @@ export function CustomAccordionItem({
   return (
     <div
       ref={itemRef} 
-      className={`overflow-hidden transition-all duration-700 ease-[0.22, 1, 0.36, 1] scroll-mt-32 ${
+      className={`overflow-hidden transition-all duration-700 ease-[0.22, 1, 0.36, 1] scroll-mt-12 ${
         isOpen
           ? 'rounded-[2.5rem] shadow-accent-glow scale-[1.02] relative z-10'
           : 'rounded-[2rem] shadow-lg border-white/[0.02]'
@@ -53,15 +53,15 @@ export function CustomAccordionItem({
             : 'bg-gradient-to-br from-surface to-graphite px-6 py-6 text-cream hover:from-surface-hover hover:to-graphite'
         }`}
       >
-        <div
+        <span
           className={`absolute inset-x-0 top-0 h-[1px] transition-opacity duration-700 ${
             isOpen ? 'bg-white/40' : 'bg-white/10'
           }`}
         />
 
-        <div className="flex items-center gap-8 md:gap-12 relative">
+        <span className="flex items-center gap-8 md:gap-12 relative">
           {number && (
-            <div className="relative">
+            <span className="relative">
               {isOpen && (
                 <div className="absolute inset-0 bg-night/20 blur-xl rounded-full" />
               )}
@@ -74,7 +74,7 @@ export function CustomAccordionItem({
               >
                 {number}
               </span>
-            </div>
+            </span>
           )}
           <h3
             className={`text-2xl md:text-3xl font-bold tracking-tight transition-all duration-500 ${
@@ -85,9 +85,9 @@ export function CustomAccordionItem({
           >
             {title}
           </h3>
-        </div>
+        </span>
 
-        <div
+        <span
           className={`w-14 h-14 rounded-full border flex items-center justify-center transition-all duration-700 shadow-2xl ${
             isOpen
               ? 'rotate-45 border-night/20 text-night bg-night/10 scale-110'
@@ -95,7 +95,7 @@ export function CustomAccordionItem({
           }`}
         >
           <Plus className="w-7 h-7" strokeWidth={1.5} />
-        </div>
+        </span>
       </button>
 
       <AnimatePresence>

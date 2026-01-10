@@ -3,6 +3,7 @@ import { useState } from 'react';
 import CtaButton from '../CtaButton';
 import { CustomAccordionItem } from '../ui/accordion';
 import { SectionHeader } from './section-header';
+import VerticalLine from '../VerticalLine';
 
 export function ProcessSection() {
   const steps = [
@@ -82,7 +83,7 @@ export function ProcessSection() {
         </div>
 
         <div className="mt-24 flex flex-col items-center gap-8">
-          <div className="w-px h-20 bg-gradient-to-b from-accent/50 to-transparent" />
+          <VerticalLine />
           <CtaButton />
         </div>
       </div>

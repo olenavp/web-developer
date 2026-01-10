@@ -3,6 +3,7 @@ import { useState } from 'react';
 import CtaButton from '../CtaButton';
 import { CustomAccordionItem } from '../ui/accordion';
 import { SectionHeader } from './section-header';
+import VerticalLine from '../VerticalLine';
 
 export function FAQSection() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -48,7 +49,7 @@ export function FAQSection() {
           </div>
 
           <div className="flex flex-col items-center gap-8">
-            <div className="w-px h-16 bg-gradient-to-b from-accent to-transparent" />
+            <VerticalLine />
             <CtaButton />
           </div>
         </div>

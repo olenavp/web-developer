@@ -6,6 +6,7 @@ import { projects } from '../../assets/data/projects';
 import CtaButton from '../CtaButton';
 import { ArrowRight } from 'lucide-react';
 import { SectionHeader } from './section-header';
+import VerticalLine from '../VerticalLine';
 
 export function ProjectsSection() {
   return (
@@ -87,7 +88,7 @@ export function ProjectsSection() {
           </div>
 
           <div className="flex flex-col items-center gap-8">
-            <div className="w-px h-16 bg-gradient-to-b from-accent to-transparent" />
+            <VerticalLine />
             <CtaButton />
           </div>
         </div>

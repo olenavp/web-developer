@@ -2,6 +2,7 @@
 import { Check } from 'lucide-react';
 import CtaButton from '../CtaButton';
 import { SectionHeader } from './section-header';
+import VerticalLine from '../VerticalLine';
 
 export function WhySection() {
   const values = [
@@ -122,7 +123,7 @@ export function WhySection() {
         </div>
 
         <div className="flex flex-col items-center gap-8">
-          <div className="w-px h-16 bg-gradient-to-b from-accent to-transparent" />
+          <VerticalLine />
           <CtaButton />
         </div>
       </div>

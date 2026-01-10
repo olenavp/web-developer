@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import FadeIn from '../FadeIn';
 import { Send } from 'lucide-react';
 import { SectionHeader } from './section-header';
+import VerticalLine from '../VerticalLine';
 
 export function ClientsProblemsSection() {
   const items = [
@@ -55,7 +56,7 @@ export function ClientsProblemsSection() {
               <div className="group relative h-[420px] md:h-[450px] bg-gradient-to-br from-graphite-light to-night rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-card-border transition-all duration-700 hover:border-accent/30 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)]">
                 <div className="absolute left-8 right-8 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
 
-                <div className="p-7 md:p-8 lg:p-10 h-full flex flex-col justify-between transition-all duration-700 ease-[0.22, 1, 0.36, 1] group-hover:scale-95 group-hover:opacity-0">
+                <div className="p-5 md:p-6 lg:p-8 h-full flex flex-col justify-between transition-all duration-700 ease-[0.22, 1, 0.36, 1] group-hover:scale-95 group-hover:opacity-0">
                   <div>
                     <div className="text-5xl lg:text-6xl font-serif italic text-accent/20 mb-4 lg:mb-6 group-hover:text-accent/40 transition-colors">
                       {item.number}
@@ -88,7 +89,7 @@ export function ClientsProblemsSection() {
                     </h4>
                   </div>
 
-                  <p className="text-base lg:text-lg text-night font-medium leading-relaxed mb-8 lg:mb-12 italic font-serif">
+                  <p className="text-base lg:text-lg text-night font-medium leading-[1.25] mb-8 lg:mb-12 italic font-serif">
                     {item.solution}
                   </p>
 
@@ -108,7 +109,7 @@ export function ClientsProblemsSection() {
 
         <FadeIn delay={0.6}>
           <div className="mt-20 flex flex-col items-center gap-10">
-            <div className="w-px h-20 bg-gradient-to-b from-accent to-transparent" />
+            <VerticalLine />
             <CtaButton />
           </div>
         </FadeIn>

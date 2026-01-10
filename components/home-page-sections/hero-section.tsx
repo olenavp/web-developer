@@ -42,7 +42,7 @@ export function HeroSection() {
                 .
               </span>
               <br />
-              <div className="flex flex-col items-start not-italic mt-4 gap-1">
+              <span className="flex flex-col items-start not-italic mt-4 gap-1">
                 <span className="font-sans font-medium text-2xl md:text-4xl lg:text-5xl text-cream-muted tracking-tight">
                   Ви отримуєте
                 </span>
@@ -61,7 +61,7 @@ export function HeroSection() {
                     </motion.span>
                   </AnimatePresence>
                 </div>
-              </div>
+              </span>
             </h1>
           </FadeIn>
 
@@ -107,9 +107,9 @@ export function HeroSection() {
 
                 <div className="flex flex-col items-start">
                   <span className="uppercase tracking-[0.2em] text-[12px] md:text-[14px] font-mono leading-none mb-1">
-                    Мій метод
+                    Як я працюю
                   </span>
-                  <div className="h-[1px] w-0 group-hover:w-full bg-accent/40 transition-all duration-500" />
+                  <div className="h-[2px] w-0 group-hover:w-full bg-accent/40 transition-all duration-500" />
                 </div>
               </Link>
             </div>

@@ -11,6 +11,7 @@ import CtaButton from '../CtaButton';
 import { testimonials } from '@/assets/data/testimonials';
 import { Quote } from 'lucide-react';
 import { SectionHeader } from './section-header';
+import VerticalLine from '../VerticalLine';
 
 export function TestimonialsSection() {
   return (
@@ -87,7 +88,7 @@ export function TestimonialsSection() {
           <div className="w-full max-w-sm h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
 
           <div className="flex flex-col items-center gap-8">
-            <div className="w-px h-16 bg-gradient-to-b from-accent to-transparent" />
+            <VerticalLine />
             <CtaButton />
           </div>
         </div>

@@ -16,10 +16,8 @@
   --color-cream-muted: rgba(245, 245, 240, 0.6);
   --color-card-border: rgba(255, 255, 255, 0.05);
 
-  /* Тіні */
   --shadow-accent-glow: 0 20px 40px -10px rgba(212, 175, 55, 0.3);
 
-  /* Анімації */
   --animate-wave-slow: wave 20s linear infinite;
   --animate-fade-up: fadeUp 0.8s ease forwards;
   --animate-text-gradient: gradientShift 3s ease infinite;
