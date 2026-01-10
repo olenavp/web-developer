@@ -12,6 +12,7 @@ import { testimonials } from '@/assets/data/testimonials';
 import { Quote } from 'lucide-react';
 import { SectionHeader } from './section-header';
 import VerticalLine from '../VerticalLine';
+import HorizontalLine from '../HorizontalLine';
 
 export function TestimonialsSection() {
   return (
@@ -21,7 +22,7 @@ export function TestimonialsSection() {
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative">
         <Carousel
           opts={{
             align: 'start',
@@ -57,15 +58,15 @@ export function TestimonialsSection() {
                     <div className="absolute inset-x-0 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
 
                     <CardContent className="p-8 flex flex-col h-full relative">
-                      <div className="mb-8 relative">
+                      <div className="mb-4 relative">
                         <Quote className="w-10 h-10 text-accent opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                       </div>
 
-                      <blockquote className="text-xl text-cream/90 flex-grow italic font-serif">
+                      <blockquote className="text-lg text-cream/90 flex-grow italic font-serif">
                         «{testimonial.quote}»
                       </blockquote>
 
-                      <div className="pt-10 mt-10 border-t border-card-border shrink-0 flex items-center gap-4">
+                      <div className="pt-4 mt-4 border-t border-card-border shrink-0 flex items-center gap-4">
                         <div className="w-1 h-10 bg-accent/30 rounded-full" />
                         <div>
                           <div className="font-bold text-lg text-cream tracking-tight group-hover:text-accent transition-colors duration-500">
@@ -85,8 +86,7 @@ export function TestimonialsSection() {
         </Carousel>
 
         <div className="mt-24 flex flex-col items-center gap-12">
-          <div className="w-full max-w-sm h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
-
+          <HorizontalLine />
           <div className="flex flex-col items-center gap-8">
             <VerticalLine />
             <CtaButton />

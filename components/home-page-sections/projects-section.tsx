@@ -7,6 +7,7 @@ import CtaButton from '../CtaButton';
 import { ArrowRight } from 'lucide-react';
 import { SectionHeader } from './section-header';
 import VerticalLine from '../VerticalLine';
+import HorizontalLine from '../HorizontalLine';
 
 export function ProjectsSection() {
   return (
@@ -42,10 +43,10 @@ export function ProjectsSection() {
                 href={`/projects/${project.id}`}
                 className="group block h-full"
               >
-                <div className="flex flex-col h-full bg-gradient-to-br from-graphite-light to-[#121416] rounded-[2.5rem] overflow-hidden border border-card-border transition-all duration-700 ease-[0.22, 1, 0.36, 1] group-hover:border-accent/30 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] group-hover:-translate-y-3 relative">
+                <div className="flex flex-col h-full bg-gradient-to-br from-graphite-light to-[#121416] rounded-[1.5rem] overflow-hidden border border-card-border transition-all duration-700 ease-[0.22, 1, 0.36, 1] group-hover:border-accent/30 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] group-hover:-translate-y-3 relative">
                   <div className="absolute left-10 right-10 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
 
-                  <div className="relative aspect-[16/11] overflow-hidden rounded-t-[2.5rem] shrink-0">
+                  <div className="relative aspect-[16/11] overflow-hidden rounded-t-[1.5rem] shrink-0">
                     <Image
                       src={project.image}
                       alt={project.projectName}
@@ -82,10 +83,10 @@ export function ProjectsSection() {
         <div className="mt-20 flex flex-col items-center gap-10">
           <div className="text-center space-y-6">
             <p className="text-cream/30 font-serif italic text-2xl md:text-3xl max-w-2xl leading-relaxed">
-              «Кожен проєкт — це окрема історія трансформації бізнесу».
+              «Кожен проєкт — це окрема історія успіху».
             </p>
-            <div className="w-12 h-[1px] bg-accent/30 mx-auto" />
           </div>
+          <HorizontalLine />
 
           <div className="flex flex-col items-center gap-8">
             <VerticalLine />

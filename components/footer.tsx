@@ -18,8 +18,8 @@ export function Footer() {
             >
               <Code2 size={28} className="text-accent" />
             </Link>
-            <p className="text-sm text-cream/30 leading-relaxed font-medium uppercase tracking-widest">
-              Створюю цифрові продукти з акцентом на та результат.
+            <p className="text-sm text-cream/30 leading-relaxed font-medium tracking-widest">
+              Створюю сайти з акцентом на та результат
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export function Footer() {
             </div>
             <div className="w-px h-4 bg-white/10" />
             <span className="text-[12px] font-mono text-cream/20 uppercase tracking-[0.2em]">
-              Designed by you
+              Designed by me
             </span>
           </div>
         </div>

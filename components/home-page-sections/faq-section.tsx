@@ -4,6 +4,7 @@ import CtaButton from '../CtaButton';
 import { CustomAccordionItem } from '../ui/accordion';
 import { SectionHeader } from './section-header';
 import VerticalLine from '../VerticalLine';
+import HorizontalLine from '../HorizontalLine';
 
 export function FAQSection() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -42,10 +43,9 @@ export function FAQSection() {
         <div className="mt-20 flex flex-col items-center text-center">
           <div className="space-y-8 mb-12">
             <p className="text-cream-muted font-serif italic text-2xl md:text-3xl max-w-xl leading-relaxed">
-              «Не знайшли відповіді на своє питання? Давайте обговоримо його
-              особисто».
+              «Не знайшли відповіді на своє питання? Обговорімо його особисто».
             </p>
-            <div className="w-12 h-[1px] bg-accent/30 mx-auto" />
+            <HorizontalLine />
           </div>
 
           <div className="flex flex-col items-center gap-8">

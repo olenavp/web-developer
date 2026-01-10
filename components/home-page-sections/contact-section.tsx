@@ -31,7 +31,7 @@ export function ContactSection() {
 
           <div className="grid gap-6 w-full">
             <a
-              href="https://t.me/yourusername"
+              href="https://t.me/olena_web"
               target="_blank"
               className="group relative bg-gradient-to-br from-graphite-light to-night p-10 rounded-[3rem] border border-card-border hover:border-accent/30 transition-all duration-700 shadow-2xl overflow-hidden"
             >
@@ -58,7 +58,7 @@ export function ContactSection() {
             </a>
 
             <a
-              href="mailto:hello@example.com"
+              href="mailto:pobehailo.olena@gmail.com"
               className="group relative bg-gradient-to-br from-graphite-light to-night p-10 rounded-[3rem] border border-card-border hover:border-accent/30 transition-all duration-700 shadow-2xl overflow-hidden"
             >
               <div className="absolute inset-x-0 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
