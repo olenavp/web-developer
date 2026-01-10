@@ -76,7 +76,7 @@ export function CustomAccordionItem({
               </span>
             </span>
           )}
-          <h3
+          <span
             className={`text-2xl md:text-3xl font-bold tracking-tight transition-all duration-500 ${
               isOpen
                 ? 'text-night drop-shadow-sm'
@@ -84,7 +84,7 @@ export function CustomAccordionItem({
             }`}
           >
             {title}
-          </h3>
+          </span>
         </span>
 
         <span

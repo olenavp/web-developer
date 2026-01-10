@@ -47,7 +47,7 @@ export function HeroSection() {
                   Ви отримуєте
                 </span>
 
-                <div className="relative inline-flex h-[1.2em] items-center overflow-hidden align-bottom">
+                <span className="relative inline-flex h-[1.2em] items-center overflow-hidden align-bottom">
                   <AnimatePresence mode="wait">
                     <motion.span
                       key={results[index]}
@@ -60,7 +60,7 @@ export function HeroSection() {
                       {results[index]}
                     </motion.span>
                   </AnimatePresence>
-                </div>
+                </span>
               </span>
             </h1>
           </FadeIn>
@@ -89,7 +89,7 @@ export function HeroSection() {
                     →
                   </span>
 
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 </Link>
               </Button>
 

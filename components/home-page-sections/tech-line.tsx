@@ -25,7 +25,6 @@ export function TechLine() {
         </p>
       </div>
 
-      {/* 2. Секція Технологій (Рухома лінія) */}
       <div className="relative">
         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-graphite to-transparent z-20" />
         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-graphite to-transparent z-20" />
@@ -54,7 +53,6 @@ export function TechLine() {
         </motion.div>
       </div>
 
-      {/* 3. Текстовий опис */}
       <div className="mt-8 flex justify-center px-6 text-center">
         <p className="text-[14px] font-mono text-cream/40 max-w-md leading-relaxed">
           Використовую сучасний стек для створення 
