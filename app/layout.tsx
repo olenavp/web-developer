@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Footer } from "@/components/footer"
 import Header from "@/components/header/Header"
+import { GoogleAnalytics } from "@/components/GoogleAnalytics"
+import { CookieBanner } from "@/components/CookieBanner"
 
 export const metadata: Metadata = {
   title: "Професійна веб-розробка для бізнесу",
@@ -37,9 +39,11 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={`font-sans antialiased`}>
+        <GoogleAnalytics />
         <Header />
         {children}
         <Footer />
+        <CookieBanner />
         <Analytics />
       </body>
     </html>
