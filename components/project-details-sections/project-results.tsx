@@ -12,7 +12,7 @@ export function ProjectResults({ project, nextProject }: { project: any, nextPro
   ];
 
   return (
-    <section className="py-32 bg-graphite relative overflow-hidden">
+    <section className="py-32 bg-night relative overflow-hidden">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] h-[40%] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 text-center">
@@ -58,8 +58,8 @@ export function ProjectResults({ project, nextProject }: { project: any, nextPro
 
           {nextProject && (
             <Link href={`/projects/${nextProject.id}`} className="group flex flex-col items-center gap-4 transition-all duration-500 hover:scale-105">
-              <span className="text-[12px] font-mono text-cream/20 uppercase tracking-[0.4em]">Наступний кейс</span>
-              <div className="flex items-center gap-4 text-cream/40 group-hover:text-accent transition-colors">
+              <span className="text-[12px] font-mono text-cream/60 uppercase tracking-[0.4em]">Наступний кейс</span>
+              <div className="flex items-center gap-4 text-cream/80 group-hover:text-accent transition-colors">
                 <span className="text-2xl font-serif italic">{nextProject.projectName}</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
               </div>

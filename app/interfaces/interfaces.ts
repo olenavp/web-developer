@@ -23,9 +23,12 @@ export interface Project {
   tabletImg: string | StaticImageData;
   mobileImg: string | StaticImageData;
   link: string;
-  extraImages?: {
+  details?: {
     title: string;
-    src: string | StaticImageData;
+    image?: string | StaticImageData;
+    video?: string;
+    text: string;
+    items?: { label: string; value: string }[];
   }[];
 }
 

@@ -28,7 +28,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-night pt-24 pb-12 px-6 sm:px-10 lg:px-12 min-h-screen flex items-center">
       <div className="absolute top-[-5%] left-[-2%] w-[50%] h-[50%] bg-accent/20 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute top-[-5%] left-[-2%] w-[50%] h-[50%] bg-accent/20 blur-[250px] rounded-full pointer-events-none" />
+      <div className="absolute top-[-5%] left-[-2%] w-[50%] h-[50%] bg-accent/20 blur-[300px] rounded-full pointer-events-none" />
 
       <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] bg-accent/10 blur-[250px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[10%] right-[-5%] w-[35%] h-[35%] bg-cream/10 blur-[120px] rounded-full pointer-events-none" />

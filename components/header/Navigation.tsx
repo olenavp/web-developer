@@ -75,7 +75,7 @@ const Navigation = () => {
               size="sm"
               className="hidden sm:inline-flex border-accent/20 hover:border-accent text-[12px] h-11 px-8"
             >
-              <Link href="#contact" className="no-underline">
+              <Link href="/#contact" className="no-underline">
                 Контакт
               </Link>
             </Button>

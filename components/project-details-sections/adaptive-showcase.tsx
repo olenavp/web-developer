@@ -28,13 +28,11 @@ export function AdaptiveShowcase({
   return (
     <section className="py-24 md:py-40 bg-graphite overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-32 space-y-6 md:space-y-8">
           <SectionHeader
             label="Multi-Device"
-            title="Адаптивність як стандарті"
+            title="Адаптивність як стандарт"
             subtitle="зручність на кожному пристрої"
           />
-        </div>
 
         <div className="grid grid-cols-12 gap-4 md:hidden">
           <motion.div

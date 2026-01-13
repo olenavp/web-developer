@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, MessageCircle } from 'lucide-react';
 import { SectionHeader } from './section-header';
+import VerticalLine from '../VerticalLine';
 
 export function ContactSection() {
   return (
@@ -85,7 +86,7 @@ export function ContactSection() {
 
             <div className="pt-8 flex justify-start lg:justify-end">
               <div className="flex flex-col items-center gap-6">
-                <div className="w-px h-12 bg-gradient-to-b from-accent/30 to-transparent" />
+                <VerticalLine />
                 <span className="text-[9px] font-mono text-cream/20 uppercase tracking-[0.5em]">
                   Available for new projects
                 </span>

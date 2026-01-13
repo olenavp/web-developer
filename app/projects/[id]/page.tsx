@@ -5,7 +5,7 @@ import { ProjectHero } from '@/components/project-details-sections/project-hero'
 import { AdaptiveShowcase } from '@/components/project-details-sections/adaptive-showcase';
 import { ProjectShowcaseSplit } from '@/components/project-details-sections/full-page-reveal';
 import { ProjectResults } from '@/components/project-details-sections/project-results';
-import { ExtraPagesGrid } from '@/components/project-details-sections/extra-pages-grid';
+import { ProjectDetails} from '@/components/project-details-sections/project-details';
 
 export default async function ProjectPage({
   params,
@@ -28,13 +28,12 @@ export default async function ProjectPage({
       <ProjectHero project={project} />
 
       <ProjectShowcaseSplit project={project} />
-      {project.extraImages && <ExtraPagesGrid images={project.extraImages} />}
+      <ProjectDetails details={project.details} />
       <AdaptiveShowcase
         desktopImg={project.desktopImg}
         tabletImg={project.tabletImg}
         mobileImg={project.mobileImg}
       />
-
       <ProjectResults project={project} nextProject={nextProject} />
     </main>
   );
