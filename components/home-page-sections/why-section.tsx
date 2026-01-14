@@ -44,11 +44,11 @@ export function WhySection() {
               key={i}
               className="relative group bg-gradient-to-br from-graphite-light to-night p-6 lg:p-10 rounded-[2.5rem] border border-card-border hover:border-accent/30 transition-all duration-700 shadow-2xl"
             >
-              <div className="absolute left-8 right-8 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
+              <div className="absolute left-8 right-8 top-0 h-[1px] bg-white/20 group-hover:bg-accent/50 transition-colors duration-700" />
 
               <div className="relative">
                 <div className="flex items-center gap-4 lg:gap-6 mb-6 lg:mb-8">
-                  <div className="w-12 h-12 lg:w-14 lg:h-14 shrink-0 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent shadow-inner transform group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 shrink-0 rounded-xl bg-accent/10 border border-accent/40 flex items-center justify-center text-accent shadow-inner transform group-hover:scale-110 transition-transform duration-500">
                     <Check
                       className="w-6 h-6 lg:w-7 lg:h-7"
                       strokeWidth={2.5}
@@ -60,7 +60,7 @@ export function WhySection() {
                   </h3>
                 </div>
 
-                <p className="text-cream-muted leading-relaxed font-medium text-base lg:text-xl italic font-serif border-l border-card-border pl-5 lg:pl-6">
+                <p className="text-cream-muted leading-relaxed font-medium text-base lg:text-xl italic font-serif border-l border-white/15 pl-5 lg:pl-6">
                   {v.description}
                 </p>
               </div>
@@ -70,17 +70,16 @@ export function WhySection() {
 
         <div className="relative p-12 md:p-20 bg-night rounded-[4rem] border-t-2 border-l border-white/10 overflow-hidden mb-24 shadow-[0_80px_150px_-30px_rgba(0,0,0,0.9),0_0_50px_rgba(214,175,55,0.05)] group">
           <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-accent/10 blur-[120px] rounded-full pointer-events-none group-hover:bg-accent/15 transition-colors duration-1000" />
-          <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-accent]/5 blur-[100px] rounded-full pointer-events-none" />
-
+          
           <div className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]" />
 
           <div className="relative">
             <div className="flex flex-col gap-10">
               <div className="flex items-center gap-6">
-                <div className="text-8xl text-accent font-serif leading-none select-none opacity-80 h-10 flex items-center mb-4">
+                <div className="text-8xl text-accent font-serif leading-none select-none opacity-90 h-10 flex items-center mb-4">
                   “
                 </div>
-                <div className="h-[1px] flex-grow bg-gradient-to-r from-accent/40 to-transparent" />
+                <div className="h-[1px] flex-grow bg-gradient-to-r from-accent/50 to-transparent" />
               </div>
 
               <p className="text-2xl md:text-4xl text-cream font-medium italic leading-[1.4] font-serif max-w-4xl tracking-tight">
@@ -91,7 +90,7 @@ export function WhySection() {
 
               <div className="mt-8 flex flex-wrap items-center gap-x-12 gap-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center text-accent">
+                  <div className="w-12 h-12 rounded-full border border-accent/40 flex items-center justify-center text-accent">
                     <Check className="w-5 h-5" />
                   </div>
                   <div className="flex flex-col">
@@ -104,7 +103,7 @@ export function WhySection() {
                   </div>
                 </div>
 
-                <div className="hidden md:block h-10 w-[1px] bg-white/10" />
+                <div className="hidden md:block h-10 w-[1px] bg-white/20" />
 
                 <div className="flex flex-col">
                   <span className="text-[12px] font-mono text-cream-muted uppercase tracking-[0.4em] mb-1">

@@ -39,7 +39,7 @@ export function AdaptiveShowcase({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative col-span-12 aspect-[16/10] rounded-2xl overflow-hidden border-4 border-night shadow-xl bg-night"
+            className="relative col-span-12 aspect-[16/10] rounded-2xl overflow-hidden border-4 border-night shadow-2xl bg-night"
           >
             <Image
               src={desktopImg}
@@ -54,7 +54,7 @@ export function AdaptiveShowcase({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="relative col-span-7 aspect-[4/3] rounded-2xl overflow-hidden border-4 border-night shadow-xl bg-night"
+            className="relative col-span-7 aspect-[4/3] rounded-2xl overflow-hidden border-4 border-night shadow-2xl bg-night"
           >
             <Image
               src={tabletImg}
@@ -69,7 +69,7 @@ export function AdaptiveShowcase({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="relative col-span-5 aspect-[9/14] rounded-xl overflow-hidden border-4 border-night shadow-xl bg-night"
+            className="relative col-span-5 aspect-[9/14] rounded-xl overflow-hidden border-4 border-night shadow-2xl bg-night"
           >
             <Image
               src={mobileImg}
@@ -92,7 +92,7 @@ export function AdaptiveShowcase({
               src={desktopImg}
               alt="Desktop View"
               fill
-              className="object-cover object-top opacity-40"
+              className="object-cover object-top opacity-60"
             />
           </motion.div>
 
@@ -102,7 +102,7 @@ export function AdaptiveShowcase({
             viewport={{ once: true }}
             transition={{ ...transition, delay: 0.4 }}
             animate={floating}
-            className="absolute left-[2%] bottom-[10%] w-[48%] aspect-[4/3] rounded-[2rem] overflow-hidden border-[8px] border-night shadow-[0_50px_100px_rgba(0,0,0,0.5)] z-10 bg-night"
+            className="absolute left-[2%] bottom-[10%] w-[48%] aspect-[4/3] rounded-[2rem] overflow-hidden border-[8px] border-night shadow-[0_50px_100px_rgba(0,0,0,0.6)] z-10 bg-night"
           >
             <Image
               src={tabletImg}
@@ -126,7 +126,7 @@ export function AdaptiveShowcase({
                 delay: 1,
               },
             }}
-            className="absolute right-[8%] -bottom-[5%] w-[24%] aspect-[9/14] rounded-2xl overflow-hidden border-[8px] border-night shadow-[0_50px_100px_rgba(0,0,0,0.6)] z-20 bg-night"
+            className="absolute right-[8%] -bottom-[5%] w-[24%] aspect-[9/14] rounded-2xl overflow-hidden border-[8px] border-night shadow-[0_50px_100px_rgba(0,0,0,0.7)] z-20 bg-night"
           >
             <Image
               src={mobileImg}
@@ -136,7 +136,7 @@ export function AdaptiveShowcase({
             />
           </motion.div>
 
-          <div className="absolute inset-0 bg-accent/5 blur-[150px] rounded-full -z-10" />
+          <div className="absolute inset-0 bg-accent/10 blur-[150px] rounded-full -z-10" />
         </div>
       </div>
     </section>

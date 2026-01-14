@@ -14,7 +14,7 @@ export function FAQSection() {
       id="faq"
       className="py-32 px-6 sm:px-10 lg:px-12 bg-night relative overflow-hidden"
     >
-      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-accent/5 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-accent/8 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-5xl mx-auto relative">
         <div className="mb-20">

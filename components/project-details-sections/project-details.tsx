@@ -2,9 +2,10 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { SectionHeader } from '../home-page-sections/section-header';
+import { StaticImageData } from 'next/image';
 
 interface Detail {
-  image?: string;
+  image?: string | StaticImageData;
   video?: string;
   title: string;
   text: string;
@@ -15,7 +16,8 @@ export function ProjectDetails({ details }: { details?: Detail[] }) {
   if (!details || details.length === 0) return null;
 
   return (
-    <section className="py-12 px-6 sm:px-10 lg:px-12 bg-night">
+    /* bg-night тепер #111112 */
+    <section className="py-24 px-6 sm:px-10 lg:px-12 bg-night">
       <SectionHeader
         label="Inside the build"
         title="Логіка рішень:"
@@ -37,7 +39,8 @@ export function ProjectDetails({ details }: { details?: Detail[] }) {
               transition={{ duration: 0.8 }}
               className="w-full md:flex-[1.5]"
             >
-              <div className="relative aspect-[4/4] rounded-[2rem] overflow-hidden border border-white/5 bg-transparent">
+              {/* Рамка медіа-блоку піднята до white/10 */}
+              <div className="relative aspect-[4/4] rounded-[2rem] overflow-hidden border border-white/10 bg-transparent shadow-2xl">
                 {item.video ? (
                   <video
                     src={item.video}
@@ -65,30 +68,37 @@ export function ProjectDetails({ details }: { details?: Detail[] }) {
               className="flex-1 space-y-8"
             >
               <div className="space-y-4">
-                <span className="font-mono text-accent text-[10px] uppercase tracking-[0.4em]">
+                {/* Номер деталі став яскравішим (accent/90) */}
+                <span className="font-mono text-accent/90 text-[10px] uppercase tracking-[0.4em] font-bold">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <h3 className="text-3xl md:text-4xl font-serif italic text-cream leading-tight break-keep">
                   {item.title}
                 </h3>
-                <p className="text-cream/50 font-light leading-relaxed text-lg italic">
+                {/* Опис піднято з 50% до 75% прозорості */}
+                <p className="text-cream/75 font-light leading-relaxed text-lg italic">
                   {item.text}
                 </p>
               </div>
 
               {item.items && (
-                <ul className="space-y-4 pt-6 border-t border-white/5">
+                /* Роздільник списку піднято до white/10 */
+                <ul className="space-y-4 pt-6 border-t border-white/10">
                   {item.items.map((point, idx) => (
                     <li key={idx} className="flex items-baseline gap-4 group">
-                      <span className="text-accent font-mono text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">
+                      {/* Цифри у списку підняті до 80% непрозорості */}
+                      <span className="text-accent font-mono text-[10px] opacity-80 group-hover:opacity-100 transition-opacity">
                         0{idx + 1}
                       </span>
                       <div className="flex flex-col-reverse sm:flex-row sm:justify-between sm:items-baseline w-full gap-1">
-                        <span className="text-cream font-mono text-xs uppercase tracking-widest">
+                        {/* Лейбл пункту піднято до 90% */}
+                        <span className="text-cream/90 font-mono text-xs uppercase tracking-widest">
                           {point.label}
                         </span>
-                        <div className="hidden sm:block flex-grow mx-4 border-b border-white/5 border-dotted" />
-                        <span className="text-cream/40 font-light text-sm">
+                        {/* Пунктирна лінія стала чіткішою (white/15) */}
+                        <div className="hidden sm:block flex-grow mx-4 border-b border-white/15 border-dotted" />
+                        {/* Значення пункту піднято з 40% до 60% */}
+                        <span className="text-cream/60 font-light text-sm">
                           {point.value}
                         </span>
                       </div>

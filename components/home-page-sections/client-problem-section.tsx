@@ -14,7 +14,7 @@ export function ClientsProblemsSection() {
       problem:
         'Маєте ідею, але не знаєте, як перетворити її на працюючий продукт.',
       solution:
-        'Проектую структуру та логіку, де кожен елемент веде до цільової дії.',
+        'Проєктую структуру та технічну базу майбутнього сайту, забезпечуючи перехід від абстрактної ідеї до робочої версії.',
       result: 'Фундамент для масштабування',
     },
     {
@@ -31,7 +31,7 @@ export function ClientsProblemsSection() {
       title: 'Низька швидкість та погана адаптивність',
       problem: 'Сайт довго вантажиться, це дратує відвідувачів.',
       solution:
-        'Ультра-швидке завантаження та бездоганний досвід на смартфонах. Оптимізація швидкості до рівня Google Green Zone.',
+        'Оптимізація швидкості до рівня Google Green Zone. Ультра-швидке завантаження та бездоганний досвід на смартфонах. ',
       result: 'Максимальна конверсія',
     },
   ];
@@ -54,11 +54,11 @@ export function ClientsProblemsSection() {
           {items.map((item, index) => (
             <FadeIn key={index} delay={0.2 + index * 0.1}>
               <div className="group relative h-[420px] md:h-[450px] bg-gradient-to-br from-graphite-light to-night rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-card-border transition-all duration-700 hover:border-accent/30 hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)]">
-                <div className="absolute left-8 right-8 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
+                <div className="absolute left-8 right-8 top-0 h-[1px] bg-white/15 group-hover:bg-accent/40 transition-colors duration-700" />
 
                 <div className="p-5 md:p-6 lg:p-8 h-full flex flex-col justify-between transition-all duration-700 ease-[0.22, 1, 0.36, 1] group-hover:scale-95 group-hover:opacity-0">
                   <div>
-                    <div className="text-5xl lg:text-6xl font-serif italic text-accent/20 mb-4 lg:mb-6 group-hover:text-accent/40 transition-colors">
+                    <div className="text-5xl lg:text-6xl font-serif italic text-accent/45 mb-4 lg:mb-6 group-hover:text-accent/60 transition-colors">
                       {item.number}
                     </div>
                     <h3 className="text-xl lg:text-2xl font-bold text-cream mb-3 lg:mb-4 leading-tight tracking-tight">
@@ -70,7 +70,7 @@ export function ClientsProblemsSection() {
                   </div>
 
                   <div className="flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] text-accent font-bold">
-                    <div className="w-10 h-10 rounded-full border border-accent/20 flex items-center justify-center bg-night/50">
+                    <div className="w-10 h-10 rounded-full border border-accent/45 flex items-center justify-center bg-night/50">
                       <span className="text-lg">→</span>
                     </div>
                     <span className="hidden sm:inline">Як я це вирішу</span>
@@ -81,11 +81,11 @@ export function ClientsProblemsSection() {
                   <div className="mb-6 lg:mb-8 relative">
                     <Send className="absolute -top-10 -right-4 w-24 h-24 lg:w-32 lg:h-32 text-night/5 rotate-12" />
 
-                    <span className="text-[12px] lg:text-[12px] font-mono text-night/50 mb-2 block uppercase tracking-[0.4em] font-bold">
+                    <span className="text-[12px] lg:text-[12px] font-mono text-night/75 mb-2 block uppercase tracking-[0.4em] font-bold">
                       [ Рішення ]
                     </span>
                     <h4 className="text-night text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
-                      Мій метод
+                      План дій
                     </h4>
                   </div>
 
@@ -93,8 +93,8 @@ export function ClientsProblemsSection() {
                     {item.solution}
                   </p>
 
-                  <div className="pt-6 lg:pt-8 border-t border-night/15">
-                    <span className="text-[12px] lg:text-[12px] uppercase text-night/40 font-bold block mb-2 tracking-[0.3em]">
+                  <div className="pt-6 lg:pt-8 border-t border-night/25">
+                    <span className="text-[12px] lg:text-[12px] uppercase text-night/55 font-bold block mb-2 tracking-[0.3em]">
                       Результат
                     </span>
                     <span className="text-night font-bold text-lg lg:text-xl leading-none">

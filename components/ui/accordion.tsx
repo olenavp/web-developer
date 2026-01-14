@@ -38,11 +38,11 @@ export function CustomAccordionItem({
 
   return (
     <div
-      ref={itemRef} 
+      ref={itemRef}
       className={`overflow-hidden transition-all duration-700 ease-[0.22, 1, 0.36, 1] scroll-mt-12 ${
         isOpen
           ? 'rounded-[2.5rem] shadow-accent-glow scale-[1.02] relative z-10'
-          : 'rounded-[2rem] shadow-lg border-white/[0.02]'
+          : 'rounded-[2rem] shadow-lg border border-white/10'
       }`}
     >
       <button
@@ -55,7 +55,7 @@ export function CustomAccordionItem({
       >
         <span
           className={`absolute inset-x-0 top-0 h-[1px] transition-opacity duration-700 ${
-            isOpen ? 'bg-white/40' : 'bg-white/10'
+            isOpen ? 'bg-white/50' : 'bg-white/15'
           }`}
         />
 
@@ -69,7 +69,7 @@ export function CustomAccordionItem({
                 className={`relative text-[12px] font-mono font-bold px-4 py-2 rounded-full transition-all duration-500 border ${
                   isOpen
                     ? 'bg-night text-accent border-night'
-                    : 'bg-night/40 text-accent border-accent/20 shadow-inner'
+                    : 'bg-night/60 text-accent border-accent/40 shadow-inner'
                 }`}
               >
                 {number}
@@ -91,7 +91,7 @@ export function CustomAccordionItem({
           className={`w-14 h-14 rounded-full border flex items-center justify-center transition-all duration-700 shadow-2xl ${
             isOpen
               ? 'rotate-45 border-night/20 text-night bg-night/10 scale-110'
-              : 'rotate-0 border-white/10 text-accent bg-night/30 group-hover:border-accent/50 group-hover:scale-110'
+              : 'rotate-0 border-white/20 text-accent bg-night/30 group-hover:border-accent/60 group-hover:scale-110'
           }`}
         >
           <Plus className="w-7 h-7" strokeWidth={1.5} />
@@ -110,17 +110,17 @@ export function CustomAccordionItem({
             <div className="pb-10 px-10 md:pl-20 pr-12 relative">
               <div className="relative">
                 {description && (
-                  <p className="text-2xl md:text-3xl text-night/90 leading-tight mb-16 max-w-4xl italic font-serif border-l-4 border-night/10 pl-10 pt-4">
+                  <p className="text-2xl md:text-3xl text-night/95 leading-tight mb-16 max-w-4xl italic font-serif border-l-4 border-night/20 pl-10 pt-4">
                     {description}
                   </p>
                 )}
 
                 {(clientRole || result) && (
-                  <div className="grid sm:grid-cols-2 gap-16 py-8 border-t border-night/10 max-w-4xl">
+                  <div className="grid sm:grid-cols-2 gap-16 py-8 border-t border-night/15 max-w-4xl">
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-night/40" />
-                        <span className="text-[12px] font-mono text-night/50 uppercase tracking-[0.4em] font-bold">
+                        <div className="w-1.5 h-1.5 rounded-full bg-night/60" />
+                        <span className="text-[12px] font-mono text-night/75 uppercase tracking-[0.4em] font-bold">
                           Ваша участь
                         </span>
                       </div>
@@ -130,8 +130,8 @@ export function CustomAccordionItem({
                     </div>
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-night/40" />
-                        <span className="text-[12px] font-mono text-night/50 uppercase tracking-[0.4em] font-bold">
+                        <div className="w-1.5 h-1.5 rounded-full bg-night/60" />
+                        <span className="text-[12px] font-mono text-night/75 uppercase tracking-[0.4em] font-bold">
                           Результат етапу
                         </span>
                       </div>

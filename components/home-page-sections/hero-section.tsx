@@ -67,7 +67,7 @@ export function HeroSection() {
 
           <FadeIn delay={0.2}>
             <div className="max-w-xl border-l-2 border-accent pl-8 py-1 ml-1">
-              <p className="text-lg md:text-xl text-cream/70 leading-relaxed font-medium italic font-serif">
+              <p className="text-lg md:text-xl text-cream-muted leading-relaxed font-medium italic font-serif">
                 Повний цикл розробки, від дизайну до реалізації і запуску
               </p>
             </div>
@@ -114,12 +114,6 @@ export function HeroSection() {
               </Link>
             </div>
           </FadeIn>
-        </div>
-      </div>
-
-      <div className="absolute bottom-12 right-12 hidden xl:block">
-        <div className="text-[9px] font-mono text-cream/10 [writing-mode:vertical-lr] rotate-180 tracking-[0.5em] uppercase">
-          Edition 2026
         </div>
       </div>
     </section>

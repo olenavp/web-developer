@@ -29,7 +29,8 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
         scrolled
-          ? 'bg-night/90 backdrop-blur-xl h-20 border-b border-card-border shadow-2xl'
+          /* Підняли border-b до white/10 для чіткого відсікання контенту при скролі */
+          ? 'bg-night/90 backdrop-blur-xl h-20 border-b border-white/10 shadow-2xl'
           : 'bg-transparent h-28'
       }`}
     >
@@ -41,17 +42,13 @@ const Navigation = () => {
               className="flex items-center gap-4 group no-underline"
               onClick={closeMenu}
             >
-              <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center border border-accent/20 group-hover:border-accent/50 transition-all duration-500 shadow-inner">
+              {/* Посилили рамку логотипу до accent/30 */}
+              <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center border border-accent/30 group-hover:border-accent/60 transition-all duration-500 shadow-inner">
                 <Code2
                   size={28}
                   className="text-accent transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <span className="text-xl md:text-2xl font-serif italic text-cream tracking-tight hidden xs:block">
-                Designer{' '}
-                <span className="font-sans not-italic text-cream/20">&</span>{' '}
-                Dev
-              </span>
             </Link>
           </div>
 
@@ -60,7 +57,8 @@ const Navigation = () => {
               <Link
                 key={idx}
                 href={`/#${link.href}`}
-                className="relative text-[12px] font-mono uppercase tracking-[0.4em] text-cream-muted transition-colors duration-500 hover:text-accent group no-underline py-2"
+                /* Підняли з cream-muted (0.75) до cream/75 для гарантованої читабельності поверх будь-якого фону */
+                className="relative text-[12px] font-mono uppercase tracking-[0.4em] text-cream/75 transition-colors duration-500 hover:text-accent group no-underline py-2"
               >
                 {link.title}
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-accent transition-all duration-500 group-hover:w-full" />
@@ -73,7 +71,8 @@ const Navigation = () => {
               asChild
               variant="outline"
               size="sm"
-              className="hidden sm:inline-flex border-accent/20 hover:border-accent text-[12px] h-11 px-8"
+              /* Посилили рамку кнопки "Контакт" до accent/40 */
+              className="hidden sm:inline-flex border-accent/40 hover:border-accent text-accent text-[12px] h-11 px-8 bg-transparent hover:bg-accent/5 transition-all duration-500"
             >
               <Link href="/#contact" className="no-underline">
                 Контакт
@@ -82,7 +81,8 @@ const Navigation = () => {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden w-14 h-14 rounded-2xl bg-card-border flex items-center justify-center text-accent transition-all active:scale-90 border border-card-border hover:bg-white/10"
+              /* Оновили кольори кнопки меню для мобайлу */
+              className="md:hidden w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-accent transition-all active:scale-90 border border-white/10 hover:bg-white/10"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -99,9 +99,10 @@ const Navigation = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
+                /* bg-night тепер #111112 */
                 className="fixed inset-0 bg-night z-[100] flex flex-col p-10 pt-40"
               >
-                <div className="absolute top-0 right-0 w-full h-full bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
+                <div className="absolute top-0 right-0 w-full h-full bg-accent/8 blur-[120px] rounded-full pointer-events-none" />
 
                 <div className="flex flex-col gap-10 relative z-10">
                   {navLinks.map((link, idx) => (
@@ -114,9 +115,10 @@ const Navigation = () => {
                       <Link
                         href={`/#${link.href}`}
                         onClick={closeMenu}
-                        className="text-5xl font-serif italic text-cream hover:text-accent no-underline block"
+                        className="text-5xl font-serif italic text-cream hover:text-accent no-underline block transition-colors duration-500"
                       >
-                        <span className="text-xs font-mono text-accent/30 mr-6 not-italic">
+                        {/* Підняли прозорість номерів у мобайл меню до accent/50 */}
+                        <span className="text-xs font-mono text-accent/50 mr-6 not-italic">
                           0{idx + 1}
                         </span>
                         {link.title}

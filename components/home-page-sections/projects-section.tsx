@@ -43,8 +43,8 @@ export function ProjectsSection() {
                 href={`/projects/${project.id}`}
                 className="group block h-full"
               >
-                <div className="flex flex-col h-full bg-gradient-to-br from-graphite-light to-[#121416] rounded-[1.5rem] overflow-hidden border border-card-border transition-all duration-700 ease-[0.22, 1, 0.36, 1] group-hover:border-accent/30 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] group-hover:-translate-y-3 relative">
-                  <div className="absolute left-10 right-10 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
+                <div className="flex flex-col h-full bg-gradient-to-br from-graphite-light to-graphite rounded-[1.5rem] overflow-hidden border border-card-border transition-all duration-700 ease-[0.22, 1, 0.36, 1] group-hover:border-accent/50 group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] group-hover:-translate-y-3 relative">
+                  <div className="absolute left-10 right-10 top-0 h-[1px] bg-white/20 group-hover:bg-accent/40 transition-colors duration-700" />
 
                   <div className="relative aspect-[16/11] overflow-hidden rounded-t-[1.5rem] shrink-0">
                     <Image
@@ -66,10 +66,10 @@ export function ProjectsSection() {
                     </p>
 
                     <div className="mt-auto flex items-center gap-4 text-accent font-bold text-[12px] uppercase tracking-[0.2em]">
-                      <div className="w-10 h-10 rounded-full border border-accent/20 flex items-center justify-center bg-night/50 group-hover:bg-accent group-hover:text-night transition-all duration-500 shadow-xl">
+                      <div className="w-10 h-10 rounded-full border border-accent/50 flex items-center justify-center bg-night/50 group-hover:bg-accent group-hover:text-night transition-all duration-500 shadow-xl">
                         <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-0.5" />
                       </div>
-                      <span className="opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                      <span className="opacity-80 group-hover:opacity-100 transition-opacity duration-500">
                         Переглянути кейс
                       </span>
                     </div>
@@ -82,7 +82,7 @@ export function ProjectsSection() {
 
         <div className="mt-20 flex flex-col items-center gap-10">
           <div className="text-center space-y-6">
-            <p className="text-cream/30 font-serif italic text-2xl md:text-3xl max-w-2xl leading-relaxed">
+            <p className="text-cream/60 font-serif italic text-2xl md:text-3xl max-w-2xl leading-relaxed">
               «Кожен проєкт — це окрема історія успіху».
             </p>
           </div>

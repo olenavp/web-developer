@@ -58,7 +58,7 @@ export function ProcessSection() {
       id="process"
       className="py-32 px-6 sm:px-10 lg:px-12 bg-night relative overflow-hidden"
     >
-      <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-accent/8 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">
         <SectionHeader

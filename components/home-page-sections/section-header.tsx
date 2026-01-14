@@ -40,7 +40,7 @@ export function SectionHeader({
           {subtitle && (
             <>
               <br />
-              <span className="font-sans not-italic text-cream/20 block mt-2">
+              <span className="font-sans not-italic text-cream/50 block mt-2">
                 {subtitle}
               </span>
             </>

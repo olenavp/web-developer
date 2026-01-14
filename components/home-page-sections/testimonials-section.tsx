@@ -18,6 +18,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
+      /* bg-graphite тепер #1a1c1e */
       className="py-32 px-6 sm:px-10 lg:px-12 bg-graphite relative overflow-hidden"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 blur-[140px] rounded-full pointer-events-none" />
@@ -42,8 +43,9 @@ export function TestimonialsSection() {
             </div>
 
             <div className="flex gap-4 mb-2">
-              <CarouselPrevious className="static translate-y-0 w-14 h-14 rounded-full border-card-border bg-night text-accent hover:bg-accent hover:text-night transition-all duration-500 shadow-xl" />
-              <CarouselNext className="static translate-y-0 w-14 h-14 rounded-full border-card-border bg-night text-accent hover:bg-accent hover:text-night transition-all duration-500 shadow-xl" />
+              {/* Кнопки навігації стали чіткішими завдяки оновленому card-border */}
+              <CarouselPrevious className="static translate-y-0 w-14 h-14 rounded-full border border-card-border bg-night text-accent hover:bg-accent hover:text-night transition-all duration-500 shadow-xl" />
+              <CarouselNext className="static translate-y-0 w-14 h-14 rounded-full border border-card-border bg-night text-accent hover:bg-accent hover:text-night transition-all duration-500 shadow-xl" />
             </div>
           </div>
 
@@ -55,24 +57,29 @@ export function TestimonialsSection() {
               >
                 <div className="h-full w-full py-4 flex">
                   <Card className="flex flex-col w-full bg-gradient-to-br from-graphite-light to-night border border-card-border rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] transition-all duration-700 hover:border-accent/30 hover:-translate-y-2 group relative overflow-hidden">
-                    <div className="absolute inset-x-0 top-0 h-[1px] bg-white/10 group-hover:bg-accent/40 transition-colors duration-700" />
+                    {/* Верхня лінія піднята до white/20 */}
+                    <div className="absolute inset-x-0 top-0 h-[1px] bg-white/20 group-hover:bg-accent/40 transition-colors duration-700" />
 
                     <CardContent className="p-8 flex flex-col h-full relative">
                       <div className="mb-4 relative">
-                        <Quote className="w-10 h-10 text-accent opacity-20 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                        {/* Іконка Quote тепер має базову прозорість 40% (було 20%) */}
+                        <Quote className="w-10 h-10 text-accent opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                       </div>
 
-                      <blockquote className="text-lg text-cream/90 flex-grow italic font-serif">
+                      {/* Текст цитати піднято до cream/95 для бездоганної читабельності */}
+                      <blockquote className="text-lg text-cream/95 flex-grow italic font-serif leading-relaxed">
                         «{testimonial.quote}»
                       </blockquote>
 
                       <div className="pt-4 mt-4 border-t border-card-border shrink-0 flex items-center gap-4">
-                        <div className="w-1 h-10 bg-accent/30 rounded-full" />
+                        {/* Вертикальний роздільник піднято до accent/45 */}
+                        <div className="w-1 h-10 bg-accent/45 rounded-full" />
                         <div>
                           <div className="font-bold text-lg text-cream tracking-tight group-hover:text-accent transition-colors duration-500">
                             {testimonial.author}
                           </div>
-                          <div className="text-[12px] font-mono text-accent/50 uppercase tracking-[0.3em] mt-1.5 font-bold">
+                          {/* Позиція автора піднята з accent/50 до accent/80 */}
+                          <div className="text-[12px] font-mono text-accent/80 uppercase tracking-[0.3em] mt-1.5 font-bold">
                             {testimonial.position}
                           </div>
                         </div>
