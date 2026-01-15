@@ -8,16 +8,16 @@ import { ArrowRight } from 'lucide-react';
 import { SectionHeader } from './section-header';
 import VerticalLine from '../VerticalLine';
 import HorizontalLine from '../HorizontalLine';
+import { Section } from '../Section';
 
 export function ProjectsSection() {
   return (
-    <section
+    <Section
       id="projects"
-      className="py-32 px-6 sm:px-10 lg:px-12 bg-night relative overflow-hidden"
+      className="bg-night"
+      withGlow={true}
+      glowPosition="top-left"
     >
-      <div className="absolute top-1/4 left-0 w-[40%] h-[40%] bg-accent/5 blur-[140px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 right-0 w-[30%] h-[30%] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
-
       <div className="max-w-6xl mx-auto relative">
         <SectionHeader
           label="Вибрані роботи"
@@ -94,6 +94,6 @@ export function ProjectsSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

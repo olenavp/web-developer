@@ -23,8 +23,6 @@ export function CookieBanner() {
         ad_storage: 'granted',
         analytics_storage: 'granted',
       });
-    } else {
-      console.log('GA gtag function not found');
     }
   };
   const declineCookies = () => {
@@ -40,12 +38,13 @@ export function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-6 left-6 right-6 md:left-auto md:right-12 md:max-w-md z-[100]"
+          className="fixed bottom-4 left-4 right-4 md:bottom-8 md:right-12 md:left-auto md:max-w-sm z-[100]"
         >
-          <div className="bg-night/80 backdrop-blur-xl border border-white/5 p-6 rounded-[2rem] shadow-2xl relative overflow-hidden group">
-            <div className="absolute -top-12 -right-12 w-24 h-24 bg-accent/10 blur-3xl rounded-full" />
+          <div className="bg-night/90 backdrop-blur-xl border border-white/15 p-5 md:p-7 rounded-[2rem] shadow-2xl relative overflow-hidden group">
+            
+            <div className="absolute -top-12 -right-12 w-24 h-24 bg-accent/15 blur-3xl rounded-full pointer-events-none" />
 
-            <div className="relative space-y-4">
+            <div className="relative space-y-5">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="font-mono text-[10px] text-accent uppercase tracking-[0.3em] font-bold">
@@ -53,29 +52,27 @@ export function CookieBanner() {
                 </span>
               </div>
 
-              <p className="text-[13px] text-cream/60 leading-relaxed font-light">
-                Я використовую файли cookie, щоб зрозуміти, як ви взаємодієте з
-                сайтом, та покращити ваш досвід. Продовжуючи, ви погоджуєтесь із
-                моєю{' '}
+              <p className="text-[12px] md:text-[13px] text-cream/80 leading-relaxed font-light">
+                Я використовую файли cookie, щоб покращити ваш досвід. Продовжуючи, ви погоджуєтесь із моєю{' '}
                 <Link
                   href="/privacy-policy"
-                  className="text-accent hover:underline underline-offset-4 transition-all"
+                  className="text-accent hover:text-cream underline underline-offset-4 transition-all decoration-accent/30 hover:decoration-cream"
                 >
-                  Політикою конфіденційності
+                  Політикою
                 </Link>
                 .
               </p>
 
-              <div className="flex gap-4 pt-2">
+              <div className="flex gap-3 pt-1">
                 <button
                   onClick={acceptCookies}
-                  className="flex-1 bg-accent text-night text-[11px] font-mono font-bold uppercase tracking-widest py-3 rounded-full hover:bg-cream transition-all duration-500 shadow-lg shadow-accent/10"
+                  className="flex-1 bg-accent text-night text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-widest py-3 rounded-full hover:bg-cream transition-all duration-500 shadow-lg shadow-accent/10 active:scale-95"
                 >
                   Прийняти
                 </button>
                 <button
                   onClick={declineCookies}
-                  className="px-6 border border-white/10 text-cream/40 text-[11px] font-mono font-bold uppercase tracking-widest rounded-full hover:text-cream hover:border-white/30 transition-all duration-500"
+                  className="px-5 md:px-8 border border-white/15 text-cream/60 text-[10px] md:text-[11px] font-mono font-bold uppercase tracking-widest rounded-full hover:text-cream hover:border-white/40 transition-all duration-500 active:scale-95"
                 >
                   Ні
                 </button>

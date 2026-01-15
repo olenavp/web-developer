@@ -3,35 +3,39 @@ import { Check } from 'lucide-react';
 import CtaButton from '../CtaButton';
 import { SectionHeader } from './section-header';
 import VerticalLine from '../VerticalLine';
+import { Section } from '../Section';
+
+const values = [
+  {
+    title: 'Прямий доступ до виконавця',
+    description:
+      'Ви працюєте напряму з виконавцем, що спрощує комунікацію та допомагає швидше узгоджувати деталі проєкту.',
+  },
+  {
+    title: 'Дизайн як стратегія',
+    description:
+      'Для мене дизайн – це не те, як сайт виглядає, а те, як він працює. Естетика має сенс лише тоді, коли вона не заважає користувачу сприймати інформацію.',
+  },
+  {
+    title: 'Повна прозорість',
+    description:
+      'Ви бачите прогрес у реальному часі. Процес розбитий на чіткі етапи з конкретними результатами в кінці кожного.',
+  },
+  {
+    title: 'Партнерство',
+    description:
+      'Я не зникаю після запуску. За потреби я можу супроводжувати та розвивати продукт у подальшому.',
+  },
+];
 
 export function WhySection() {
-  const values = [
-    {
-      title: 'Прямий доступ до виконавця',
-      description:
-        'Ви працюєте безпосередньо з виконавцем. Жодних менеджерів та втрачених змістів у ланцюжку передачі інформації.',
-    },
-    {
-      title: 'Дизайн як стратегія',
-      description:
-        'Для мене дизайн – це не те, як сайт виглядає, а те, як він працює. Естетика має сенс лише тоді, коли вона не заважає користувачу сприймати інформацію.',
-    },
-    {
-      title: 'Повна прозорість',
-      description:
-        'Ви бачите прогрес у реальному часі. Процес розбитий на чіткі етапи з конкретними результатами в кінці кожного.',
-    },
-    {
-      title: 'Партнерство',
-      description:
-        'Я не зникаю після запуску. Мій пріоритет — стабільна робота та розвиток вашого продукту в довгу.',
-    },
-  ];
-
   return (
-    <section className="py-32 px-6 sm:px-10 lg:px-12 bg-graphite relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-accent/5 blur-[160px] rounded-full pointer-events-none" />
-
+    <Section
+      id="format"
+      className="bg-graphite"
+      withGlow={true}
+      glowPosition="center"
+    >
       <div className="max-w-6xl mx-auto relative">
         <SectionHeader
           label="Формат роботи"
@@ -70,7 +74,7 @@ export function WhySection() {
 
         <div className="relative p-12 md:p-20 bg-night rounded-[4rem] border-t-2 border-l border-white/10 overflow-hidden mb-24 shadow-[0_80px_150px_-30px_rgba(0,0,0,0.9),0_0_50px_rgba(214,175,55,0.05)] group">
           <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-accent/10 blur-[120px] rounded-full pointer-events-none group-hover:bg-accent/15 transition-colors duration-1000" />
-          
+
           <div className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]" />
 
           <div className="relative">
@@ -126,6 +130,6 @@ export function WhySection() {
           <CtaButton />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

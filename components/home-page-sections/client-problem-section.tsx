@@ -5,6 +5,7 @@ import FadeIn from '../FadeIn';
 import { Send } from 'lucide-react';
 import { SectionHeader } from './section-header';
 import VerticalLine from '../VerticalLine';
+import { Section } from '../Section';
 
 export function ClientsProblemsSection() {
   const items = [
@@ -12,7 +13,7 @@ export function ClientsProblemsSection() {
       number: '01',
       title: 'Немає сайту',
       problem:
-        'Маєте ідею, але не знаєте, як перетворити її на працюючий продукт.',
+        'Маєте амбітну ідею, але не знаєте, як перетворити її на працюючий продукт, технічна реалізація здається складною та незрозумілою.',
       solution:
         'Проєктую структуру та технічну базу майбутнього сайту, забезпечуючи перехід від абстрактної ідеї до робочої версії.',
       result: 'Фундамент для масштабування',
@@ -21,15 +22,16 @@ export function ClientsProblemsSection() {
       number: '02',
       title: 'Обмеження конструкторів',
       problem:
-        'Конструктори гальмують завантаження та не дають унікальності. Типові шаблони гальмують розвиток та роблять вас "одним із багатьох".',
+        'Конструктори зручні для старту, але можуть обмежувати швидкість, гнучкість і можливості розвитку сайту.',
       solution:
-        'Розробка на чистому коді: повна свобода функцій та миттєве завантаження.',
+        'Розробка на чистому коді дає більше контролю, гнучкості та кращу продуктивність. Кастомна розробка дозволяє реалізувати саме ті функції, які вам потрібні.',
       result: 'Технологічна свобода',
     },
     {
       number: '03',
       title: 'Низька швидкість та погана адаптивність',
-      problem: 'Сайт довго вантажиться, це дратує відвідувачів.',
+      problem:
+        'Сайт повільно завантажується, некоректно працює на смартфонах і має низькі показники Core Web Vitals, через що втрачає довіру користувачів і позиції в Google.',
       solution:
         'Оптимізація швидкості до рівня Google Green Zone. Ультра-швидке завантаження та бездоганний досвід на смартфонах. ',
       result: 'Максимальна конверсія',
@@ -37,12 +39,7 @@ export function ClientsProblemsSection() {
   ];
 
   return (
-    <section
-      id="problems"
-      className="py-32 px-6 sm:px-10 lg:px-12 bg-graphite relative overflow-hidden"
-    >
-      <div className="absolute top-0 right-0 w-[30%] h-[30%] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
-
+    <Section id="problems" className="bg-graphite" withGlow={true}>
       <div className="max-w-6xl mx-auto">
         <SectionHeader
           label="Навіщо це вам"
@@ -114,6 +111,6 @@ export function ClientsProblemsSection() {
           </div>
         </FadeIn>
       </div>
-    </section>
+    </Section>
   );
 }
