@@ -81,7 +81,7 @@ export function HeroSection() {
                 className="relative group overflow-hidden w-full sm:w-auto h-14 md:h-16 px-10 text-base md:text-lg font-bold bg-accent text-night hover:bg-cream transition-all duration-500 rounded-full shadow-[0_10px_30px_-10px_rgba(212,175,55,0.3)] hover:shadow-[0_15px_35px_-10px_rgba(245,245,240,0.2)]"
               >
                 <Link
-                  href="#contact"
+                  href="/#contact"
                   className="flex items-center justify-center gap-3"
                 >
                   <span className="relative">Обговорити проєкт</span>

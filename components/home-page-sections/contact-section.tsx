@@ -9,7 +9,7 @@ import { Section } from '../Section';
 export function ContactSection() {
   return (
     <Section
-      id="faq"
+      id="contact"
       className="bg-graphite"
       withGlow={true}
       glowPosition="top-left"
